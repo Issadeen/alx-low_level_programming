@@ -1,19 +1,13 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Entry point
+ * add - add two numbers
+ * @a: parameter 1
+ * @b: parameter 2
  *
- * Return: Always 0
+ * Return: sum of a and b
  */
-int main(void)
+int add(int a, int b)
 {
-int a, b, c;
-
-a = 4;
-b = 6;
-c = add(a, b);
-printf("%d + %d = %d\n", a, b, c);
-
-return (0);
+return (a + b);
 }
