@@ -1,33 +1,28 @@
 #include <stdio.h>
 
-/**
-* swap_int - swaps the values of two integers
-* @a: pointer to the first integer to swap
-* @b: pointer to the second integer to swap
-*
-* Return: void
-*/
-void swap_int(int *a, int *b)
+/* function prototype */
+void swap_int(int *a, int *b);
+
+int main(void)
 {
-int temp;
+int x = 10;
+int y = 20;
+
+printf("Before swap: x = %d, y = %d\n", x, y);
+
+/* call the swap_int function to swap x and y */
+swap_int(&x, &y);
+
+printf("After swap: x = %d, y = %d\n", x, y);
+
+return 0;
+}
+
+/* function definition */
+void swap_int(int *a, int *b)
+{int temp;
 
 temp = *a;
 *a = *b;
 *b = temp;
-}
-
-/**
-* main - check the swap_int function
-*
-* Return: Always 0
-*/
-int main(void)
-{
-int a = 98, b = 42;
-
-printf("a=%d, b=%d\n", a, b);
-swap_int(&a, &b);
-printf("a=%d, b=%d\n", a, b);
-
-return (0);
 }
