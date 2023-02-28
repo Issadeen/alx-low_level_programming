@@ -1,30 +1,30 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 
 /**
- * print_half_string - Prints the second half of a string
+ * print_half_string - Prints half of a string, followed by a new line
+ * @str: The string to print
  *
- * @str: The input string
+ * Return: void
  */
 void print_half_string(char *str)
 {
-    int length = strlen(str);
+    int i, length;
+
+    length = 0;
+    while (*(str + length) != '\0')
+        length++;
 
     if (length % 2 == 0)
     {
-        for (int i = length / 2; i < length; i++)
-        {
-            _putchar(str[i]);
-        }
+        for (i = length / 2; i < length; i++)
+            _putchar(*(str + i));
     }
     else
     {
-        for (int i = (length / 2) + 1; i < length; i++)
-        {
-            _putchar(str[i]);
-        }
+        for (i = (length / 2) + 1; i < length; i++)
+            _putchar(*(str + i));
     }
 
-    _putchar('\n');
+_putchar('\n');
 }
-
