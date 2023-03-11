@@ -6,26 +6,23 @@
 *
 * Return: The integer value of the string.
 */
+
 int _atoi(char *s)
 {
-int sign = 1;
-int num = 0;
+int i, sign, num;
 
-while (*s != '\0')
+i = num = 0;
+sign = 1;
+while ((s[i] < '0' || s[i] > '9') && s[i] != '\0')
 {
-if (*s == '-')
-sign = -sign;
-
-if (*s >= '0' && *s <= '9')
+if (s[i] == '-')
+sign *= -1;
+i++;
+}
+while (s[i] >= '0' && s[i] <= '9')
 {
-num = num * 10 + (*s - '0');
-
-if (*(s + 1) < '0' || *(s + 1) > '9')
-break;
+num = num * 10 + (s[i] - '0');
+i++;
 }
-
-s++;
-}
-
-return (num * sign);
+return (num *sign);
 }

@@ -25,7 +25,7 @@ int _strlen(char *s);
 /* _puts - prints a string to stdout */
 void _puts(char *s);
 
-/* _strcpy - copies the string pointed to by src, including the null byte, to the buffer pointed to by dest */
+/* _strcpy - copies the string pointed to by src, including the null byte */
 char *_strcpy(char *dest, char *src);
 
 /* _atoi - converts a string to an integer */
